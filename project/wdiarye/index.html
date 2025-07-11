@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/appstyle.css">
+	<title> weekly diary entry </title>
+	<script type="text/javascript" src="appscripts/main.js"></script>
+</head>
+
+<body>
+	
+	<div class="navbox">
+	<h1> weekly diary entry </h1>
+    <div id="navbar">
+      <a href="#week14" class="navlink"> week 14 </a> <br>
+      <a href="#week13" class="navlink"> week 13 </a> <br>
+      <a href="#week12" class="navlink"> week 12 </a> <br>
+      <a href="#week11" class="navlink"> week 11 </a> <br> 
+      <a href="#week10" class="navlink"> week 10 </a> <br> 
+      <a href="#week9" class="navlink"> week 9 </a> <br> 
+      <a href="#week8" class="navlink"> week 8 </a> <br> 
+      <a href="#week7" class="navlink"> week 7 </a> <br>
+
+    </div>
+    </div>
+
+
+	<h3 id="week14"> week 14 </h3>
+	<div class="entry">
+		<p>
+			In this final week, all that was left to do was to tie up how the game would end and to further unify the aesthetics of the game. 
+			<br> <br> <br>
+			<span class="head"> Aesthetics </span> <br> <br>
+			I actually spent a lot of time playing with the aesthetics. But I won't go into much detail here about it because it was mainly only struggles with making deicisions. 
+			<br> <br>
+			But(!), because I already decided on a forest theme and the forest theme kinda matched the folklore (Taylor Swift's 2020 album) theme, and I already decided on a folklore colour palette, I thought I might as well use folklore fonts too! :D I haven't actually tried adding new fonts before, so I got to do that. It went pretty smoothly though. 
+			<br> <br>
+			Something more significant however: besides removing divs that I won't be wroking on anymore (but perhaps could in future updates), I decided to also add two divs on each side of the maze so they could contain the characters that have completed the maze! I turned the characters blue initially, then got them to disappear completely in the update last week and this week, and this week, I thought having them appear in an additional div would help make better sense of the game. For this to happen, I had to make the two divisions raphael canvases and then simply draw the character images on three positions once each charachter reaches the finish line. When testing out the function though, I found an error that I missed the other day. 
+			<br> <br> <br>
+			<span class="head"> An error </span> <br> <br>
+			The last character wasn't being removed because the loop function was buggy--I forgot that once the last character is removed, there won't be an active character anymore (and it would be undefined?) and the loop function that's dependent on the property of the active character won't undestand what I want (?). So I added another variable to end the loop and it's okay now. 
+			<br> <br> <br>
+			<span class="head"> Game ending </span> <br> <br>
+			Getting the game to end was relatively simple. I just had to draw an image on the raphael canvas to indicate the game ending. But, I also added a 'play again' image with an event listener that reloads the page once clicked on. I thought the location.reload() function was pretty cool too. 
+			<br> <br> <br>
+			<span class="head"> And yet more errors </span> <br> <br>
+			I was really only left with writing the game introduction at this point, but then while checking through the game, I found another error D; At the second time the scissor paper stone game is called, the keydown function that was called to move the characters runs into the keydown function that determines what choice (scissor, paper, or stone) the player makes. For example, if player 2 preses 'j' to move to the left and collides with the player 1, their choice also automatically becomes scissor (because 'j' is used to indicate a choice of scissor).
+			<br> <br>
+			I couldn't figure out how to change have the two keydown functions run into each other, so I just changed the keydown function to move the characters to a keyup function instead. And I think it sort of works for now, but I'd like to figure out how to have them separated next time. 
+			<br> <br> <br>
+			<span class="head"> And then I decided to add some audio too </span> <br> <br>
+			The game was basically done, but I thought adding audios would be a relatively easy task that could help up the feels of the game. So I added sound effects when each characters reaches their finishing line, when the characters collide, when the characters make a choice in the scissor paper stone game, when they have to make a choice again, and when a player finally wins. It went relatively smoothly (but choosing the audio was difficult because I couldn't really find sounds I wanted and I realised too late that there was a game assets zip resource provided welp). 
+			<br> <br> <br>
+			The game is finally done !!! Check it out <a href="../index.html">here</a> !!!
+		</p>
+	</div> 
+   
+	<h3 id="week13"> week 13 </h3>
+	<div class="entry">
+		<p>
+			There wasn't a need for entries after week 12, but I thought it'll be easier to keep track of my progress if I wrote about it here too. The plan for this week was to (1) get all three characters from player 1 moving in a hopefully succint manner, (2) apply that to player 2, and (3) turn the character cell colour fill to a character image fill. 
+			<br> <br> <br>
+			<span class="head"> Getting all characters moving </span> <br> <br>
+			To have the keydown function cater to all the characters for each player, I contained all the characters of each player under one array. I then introduced a new variable to hold the moving character. The moving character would still belong to the array, but to make the functions that check whether the character has reached the end or is overlapping another character, it would be easier to remove the character from the array too. I didn't know how to do that, but managed to figure it out by looking it up :> 
+			<br> <br>
+			Nonetheless, after having gotten that figured out, the functions were still buggy. To solve it, I first tried to figure out what was wrong by having the functions separated and run according to the character length (which reduces as each character becomes activated), then slowly tried to combine them back together while adding variables and statements. 
+			<br> <br>
+			Once they worked, I was able to apply them to player 2 too without much issues :D However, while testing the movements of the characters, I realised I forgot to account for how the colours should change when they overlap. 
+			<br> <br> <br>
+			<span class="head"> Adding a game within a game </span> <br> <br>
+			So, at this point, I thought I could either try to adjust the codes to account for their overlap or add on the scissors paper stone game I wanted to include initially. The two options seemed like similar amount of work at that point, so I thought I'd just add on the game. Plus, I felt like adding the scissors paper stone game would have the overall game make more sense. 
+			<br> <br>
+			So I thence started drawing up some codes I want to happen when they collide. To detect when they 'collide', I addded some new variables to the drawCell function so I could use it to detect when the two characters are in the same cell. I also wrote out what I want the keydown functions to do, and upon comparing the choices between each player, what other set of codes I want run. 
+			<br> <br>
+			I figured that I wanted an image to pop up and then be removed too. And I used a random image to test the code first. I also learnt about the remove() function I could use in raphael. I thought the remove() function was really cool and subsequently used it quite a lot :D
+			<br> <br>
+			Once the function was working, I decided that I should start figuring out what theme I want to game to have so I could decide on how to create the pop up images and what character images to use. 
+			<br> <br> <br>
+			<span class="head"> Image-filling not </span> <br> <br>
+			After settling on a theme, creating  some images I want to be drawn at certain event, and selecting the character images I want, I was so excited because I was so close to being done with the building of my game! I thought: all that's left to do is change the colour fills to images (add the images to the scissor paper stone game, end the game, and aesthetics)! But no, I forgot about the sizing )):: And I couldn't figure out how to get the sizes altered ): I tried to store the image into a variable and use it as the fill too, but I couldn't get it to work with all the functions ): So I kinda switched strategies.
+			<br> <br>
+			I created two new functions within the drawCell function and then called the function every time the character from each respective player is moved into a new cell (instead of the change in cell colour fill). I also used the remove function to remove the character drawn in the last cell it was in (instead of changing the colour back). 
+			<br> <br>
+			However, I still ran into quite a few errors. Some of the characters were sometimes not being removed as they move throughout the maze or only from their starting positions. I had to go through the code quite a lot before I finally figured out that some of the codes were no longer necessary and are causing hindrances to some codes being run for this new strategy. 
+			<br> <br>
+			The code was then working better because the characters were being removed as they move through the maze. But there were still characters that were not being removed at the starting line sometimes. At first, I thought it was the movement of the other player that affected the characters being removed or not. It didn't make sense at all because the functions of the two players were completely separated except when they collide. It took me a very long time before I noticed that the issue only occurs when the active character moves through the cells that contain the other inactive characters. And it was only then that I realised that it was the characters drawn when the active character overlaps the inactive characters that weren't being removed. Thus, I was able to store all the characters drawn due to overlaps in an array and then have them all be deleted (through a loop) every time an active character reaches the finsh line. And alas, it seemed to work.
+			<br> <br> <br>
+			There is no show for this week's game progress because I forgot to save them ):
+		</p>
+	</div> 
+
+
+
+    <h3 id="week12"> week 12 </h3>
+	<div class="entry">
+		<p>
+			For this week, I still only got to work on making the characters move because of other assignments due, ya noe. But I finally got one character to move in the way I kinda want it to!
+			<br> <br> <br>
+			<span class="head"> Animation was abandoned </span> <br> <br>
+			I was really having difficulties with the animation. I found out how to get the animation to work on Raphael with another test object, and it sometimes work on the grids, but it looked really glitchy and too much trouble to fix. So, I abandoned the idea afterall. If I have time (probably not), I might try to fix it. 
+			<br> <br> <br>
+			<span class="head"> Character development </span> <br> <br>
+			Bur for now, I am able to have one character move through the entire maze grids and have the character be tracked as a red rectangle. Initially, the entire path the character goes through would be marked as red, but I was able to revert the colour of the rectangle to its original colour through a few if statements. 
+			<br> <br>
+			I also added variables to contain the grids in the first and last coloumn so I'd be able to detect when the characters have reached their finishing lines. Once at its finishing line, I was also able to turn one character blue and stop it from moving.  
+			<br> <br> <br>
+			<span class="head"> Some other difficulties this week:  </span> 
+			<ul>
+				<li>It took me a while to figure out where to put certain groups of statements.</li>
+				<li>I also somehow forgot how I should check a variable with a list of objects in an array.</li>
+				<li>Having the 3 characters for each player as arrays was really confusing me, so I made each character a seperate variable. But I think now that I figured out the basic functions needed to move one character, it would be more efficient to have the basic functions cater to all the characters. I'll work on that next week.</li>  
+			</ul>
+			<br> <br>
+			<a href="w12progress/index.html">This</a> is the game progress made this week. 
+
+
+		</p>
+	</div>
+
+    <h3 id="week11"> week 11 </h3>
+	<div class="entry">
+		<p>
+			I didn't get to do much this week because end-of-sem stress and breakdowns, welp. But I did get the drawMaze function to work properly (thanks Daniel), edit the start game logic, and figure out how I want to write up the characters in the code. 
+			<br> <br> <br>
+			<span class="head"> The drawMaze function </span> <br> <br>
+			I didn't realise that functions are also really called in the console logs in a way that would affect the way the code works; it turned out that calling the pop() function in console logs also move the cells backwards and so the cells end up moving backward two times, leding to the downfall of the algorithm. The lesson: I should stick to simplier statement console logs and calling variables intead of functions
+			<br> <br> <br>
+			<span class="head"> Start game logic edits </span> <br> <br>
+			I realised that my start game functions problematic because the way I coded it would mean that once the game has started, it would re-started every time a player clicks the start button. It took me a while, but I eventually figured that I merely had to add a variable to check if the game has started. 
+			<br> <br> <br>
+			<span class="head"> Coding up the characters </span> <br> <br>
+			Because I want the characters to appear on random cells on either end of the maze, on top of an array to hold the characters for each player, I also had to create a variable to hold all the possible cells the characters could appear on. And because I have three characters I want to appear on three separate random cells, I decided that it might be easier to have three separate variables to hold three separate possible sets of cell in which each character could appear on. 
+			<br> <br>
+			I initially thought that I'd be able to draw my characters on top of the cells of the maze. I was going to have to characters be allocated to a random cell then draw an image when the character is in the cell. But then I realised that it probably would be easier to give the cell the characters are in an image fill. (I'm using a colour fill temororarily.)
+			<br> <br>
+			I also added an event listener to the window and tried to have the WASD keys move one character if the walls around the cell isn't present.
+			<br> <br> <br>
+			<span class="head">	Further developments needed for the characters </span> <br> <br>
+			The keydown functions work in that it is able to assign the character to different cells based on the key pressed. But I wasn't able to make it animate the rectangle (a cell property) to move as the character moves. I tried the method taught in class and the raphael method but neither worked; I will try to figure this out in the following week. (I feel it might be possible to simply alter the image fill of the new character cell and abandon the animation idea, but the animation idea would look cooler.) 
+			<br> <br>
+			I only got to test the keydown functions for one character and have yet to figure out how I'd have the function work for all the characters when I only want one character from each team to move at any point in time. </li>
+			<br> <br> <br>
+			<a href="w11progress/index.html">This</a> is the game progress made this week.
+		</p>
+	</div>
+
+    <h3 id="week10"> week 10 </h3>
+	<div class="entry">
+		<p>
+			This week's focus was on writing up an algorithm to generate a random maze through which the players are supposed to go through to get to the other side. 
+			<br> <br>
+			I had previously looked through a few different methods in which this could be done, but decided that the recursive backtracking method might be easier. Thence, I followed a few <a href="https://www.youtube.com/watch?v=HyK_Q5rrcr4">videos</a> and <a href="https://github.com/CodingTrain/website/tree/main/CodingChallenges/CC_010_Maze_DFS/P5">codes</a> to help guide me through the maze coding process. The codes were written with p5.js and it can get a little bit confusing at times, and I had some issues trying to work out what some codes were trying to achieve and the logic of things, but I mostly was able to translate most things to raphael.js. I also adjusted code slightly so that I'd be able to change the number of rows and columns I want in the maze more easily--by changing the variable number directly, rather than calculating the width of each square cell.
+			<br> <br> 
+			<span class="head"> Here are some difficulties I ran into while trying to translate the code: </span> 
+			<ul>
+				<li>When initially trying to create the cell object with a function, I followed the example and used 'this.' to add properties and methods to the function and didn't have the function return anything. This lead to issues assigning the functions created said function later on. After tweaking the code around a little a few times across a long span of time, I somehow managed to get the function to work by creating a seperate object variable to hold the cell object properties and methods, and then returning that object. </li>
+				<li>The examples didn't require a loop for some sets of actions to be repeated, but I needed one and so I had to figure out how to do that too. I started with an if loop, but then couldn't figure out what the statements should be. Then I remembered that while loops exists and used that instead with a count variable. (But I really don't know if it is working okay because my window hangs sometimes and the maze doesn't get generated, I think, especially when I increase the number of rows and columns.)</li>
+				<li>Initially, I gave the walls array booleans too, like in the example, but I didn't really know how access them, so I changed the walls attributes instead.</li>
+			</ul>
+			<br>
+			The maze generating code reequired the use of several arrays and one main cell object, and coding this up helped me better understand was how arrays work and what push() and pop() does in arrays, but I'm honestly still quite confused because it is quite difficult to wrap my brain around all these things. 
+			<br> <br> <br>
+			<span class="head">These are some things that I'm still really confused with:</span>
+			<ul>
+				<li>I had to use a for loop within a for loop to generate the cells within a grid array and got really confused as to which letters to use within statements, and what that means when calling for the grid array of cells again (refer to line 156).</li>
+				<li>The index function it is used to convert the coordinates of a cell in a way that will be recognised by the array, but I'm still not very sure as to how the math works (refer to line 306).</li>
+				<li>Why is it that my window hangs and doesn't load the maze sometimes, especially when I increase the size of the maze, and how I can fix that? I would really appreciate help here, please, thank you :"> Specifically, the game page on my home page uses 15 columns and 12 rows and it doesn't load, but the game page below which uses 10 columns and 8 rows does. </li>
+			</ul>
+			<br> <br>
+			<a href="w10progress/index.html">This</a> is the game progress made this week (enter both players' names and click start on both sides to generate maze). 
+			
+		</p>
+	</div>
+
+	<h3 id="week9"> week 9 </h3>
+	<div class="entry">
+		<p>
+			I tried to work on the layout of the game this week and work out some basic game starting logic and functions.
+			<br> <br> <br>
+			<span class="head"> Regarding the game layout: </span> <br> <br>
+			I initially thought of diferent layouts for when the page loads, when the game starts, when the subgame starts, and when the game finally ends. I tried coding up the page load layout, but then in my attempts to code up the layout for when the game starts, I realise I don't know how. I was able to clear all elements by setting the innerHTML of the entire division to an empty string (and I thought that was pretty cool), but then I wasn’t able to figure out how I'd have new elements re-appear in specifc layouts for each instance. 
+			<br> <br>
+			So, I tried to simplify the layout to current one instead, with all the elements in a more static layout. I also made sure to think about which areas raphael elements can be used. Besides character movements, I think Raphael can also be used to for the subgame--it can pop out when called by a function.
+			<br> <br>
+			Working with grids and flexboxes has been breezier at this point because I've  been working with them when first setting up my homepage, and then again when updating it. 
+			<br> <br> <br>
+			<span class="head"> Regarding the basic game starting logic and functions: </span> <br> <br>
+			I added a text input to access player's names and a button input to eventually start the game by drawing the map and drawing the characters. In the initial layout, I placed only one start button which would start the game once both players' names are filled. However, in the re-evaluation of the layout, I thought it would also be neater to have a division for each player at each end of the screen. Additionally, having two start buttons would also ensure that both players are truly ready for the game to start. 
+			<br> <br>
+			In coding this area, I ran into a few difficulties because I forgot some basics. First, I forgot to defer the main.js in the html head and was left wondering why simple things weren't working. Then, I also couldnl't get the value of player names because I had dfficultires figuring out the logic that the values should be assign to the variable within the event listener funciton instead. 
+			<br> <br>
+			However, once I got those sorted out, building the checking system to make sure both players are ready was less challenging. I first added a if else statement to makes sure the respective players fill in their names before their clicking the button can register that they are ready. Then, I added a function to make sure that the other player have also filled in their names before any clicks of the start button can register that they are ready. Finally, I also added a functoin that would check that both players are registered as ready before the game can start. I also added areas in which texts will appear to inform players to fill up their names or that the game can't be started yet because the other player isn’t ready. 
+			<br> <br> <br>
+			<a href="w9progress/index.html">This</a> is the game progress made this week. 
+		</p>
+	</div>
+
+    <h3 id="week8"> week 8 </h3>
+	<div class="entry">
+		
+		<p>
+			<span class="head">These are the tentative functions that would allow the game to do stuffs:</span>
+			<ul>
+				<li> <b>game start function</b> to create maze once players' names have been entered and the start botton has been clicked
+					<ul>
+						<li> <u>mouse event</u> on start button which should include an if statement </li>
+						<li> <u>maze function</u> to create maze (tentatively, with recursive backtracking, but still in the process of figuring out how to do it) </li> 
+					</ul> 
+				</li>
+
+				<li> <b>move functions</b> to detect when WASD and arrow keys are clicked and to move the characters accordingly, via keydown events </li>
+
+				<li> <b>scissor paper stone game (SPSG) function</b> to identify which object each player chose and who wins
+					<ul>
+						<li> <u>keydown events</u> to identify object selection </li>
+						<li> <u>compare function</u> with if statements to compare between object chosen and hence who should win </li>
+						<li> <u>transport function</u> to move the loosing character back to the team's maze start point </li>
+					</ul> 
+				</li>
+
+				<li> <b>game end function</b> to display who won and how long they took to win 
+					<ul> 
+						<li> <u>win function</u> to animate characters belonging to the winning team to bounce around a little bit </li>
+					</ul> 
+				</li>
+
+				<li> <b>board function</b> to decide if the time taken for each game should be displayed on the leadership board </li>
+
+			</ul>
+			<br>
+
+			<span class="head">These are some game rules:</span>
+			<ul>
+				<li> characters can only move along unblocked paths </li>
+				<li> only one character from each team can be in the maze at any point of time; the following character can only begin once the previous character has reached the team's maze end </li>
+				<li> character who loses the SPSG will be transported back to their maze start point and will have to start again </li>
+				<li> players can choose to avoid one another or get into one another's way </li>
+
+			</ul>
+			<br>
+
+			<span class="head">These are what each of the two players can do once the game starts:</span>
+			<ul>
+				<li> move the their respective characters to the front, back, left, or right with the WASD or arrow keys </li>
+				<li> choose scissor, paper, or stone with the WAD keys or up, left, or right arrow keys </li>
+			</ul>
+			<br>
+			
+			<span class="head">These are some information that I'd want to store:</span>
+			<ul>
+
+				<li> <b>where the characters are in the maze </b>
+					<ul>
+						<li> when characters are at the same position, SPSG function should be triggered </li>
+						<li> when the last character reaches the end, game end functions should be triggered </li>
+					</ul>
+				</li> 
+
+				<li> <b>players' selection of scissor, paper, or stone</b>
+					<ul>
+						<li>  to compare who wins and looses and hence who to transport back to their maze start point </li>
+					</ul>
+				</li>
+
+				<li> <b>time taken</b>
+					<ul>
+						<li> end game function should trigger the display of time taken to win </li>
+						<li> the five shortest time taken from each game can be displayed on a leadership board (impressive winners) </li>
+						<li> the five longest time taken from each game can be displayed on a leadership board (formindable opponents) </li>
+					</ul>
+				</li>
+
+				<li> <b>players' names</b>
+					<ul>
+						<li> so that their name can be displayed along side their time taken if they were to make it to the display board </li>
+					</ul>
+				</li>
+
+			</ul>
+			<br>
+
+			<span class="head">This is how the game ends:</span>
+			<ul>
+				<li> when one of the two players gets all 3 of their characters to the their end of the maze </li>
+				<li> upon ending, the end game function should be triggered </li>
+			</ul>
+			<br>
+
+			<span class="head"> Idea update: </span>
+			I was thinking I could include a timed alternative if I have the time. Each team would then have to get a many characters as they can to their maze end within a set amoung of time instead. They would be able to choose a standard time limit or input their own preferred time limit (limit to 10 minutes). 
+			    
+		</p>
+	</div>
+
+	<h3 id="week7"> week 7 </h3>
+	<div class="entry">
+		<p> 
+			I am thinking of creating a game that is reminiscent of a physical childhood game. The childhood game involves two teams of humans. It starts with the two teams (let's call them A and B) lined up on either end (end j and end k) of the same side of the square (side x). The goal (and the way to win the game) is to have the entire team reach the other end of side x by running along the other 3 sides of the square (the path). In other words, A's goal is to reach end j from end k; B's goal to reach end k from end j. However, there can only be one human from each team running along the path at any point in time. And, when the humans from each side of the team meets along the path, they'd have to engage in a battle of scissors, paper, stone. Let's say the human from team A looses. This first human on team A (A1, for short) would then have to go back to end k, at the back of the human line. At the same time, A2 may start their attempt at reaching end j as B1 continues their approach towards end k. When A2 and B1 meet along the path, they would then have to engage in the battle of scissors, paper, stone again. Let's say B1 reaches end k before anyone from team A reaches end j. B2 may then start their attempt at reaching end k. 
+		</p> <br>
+
+		<p> The game I'm thinking of creating would be similar, but with a few changes: <br> <ul> 
+              <li> End A and end B would be along two opposite sides of the square, and on opposing ends. </li>
+              <li> The path would be within the square, which would be transformed into a maze.  </li>
+              <li> The humans would be able to avoid one another in the maze since there would be multiple paths each human can take. In a similar vein, each player may also strategise and attempt to block their opposing team from reaching their end by meeting them in the path and enngaging in a battle of scissors, paper, stone with them. (Losing the battle in this online game would similarly entail the loser returning to their starting point--they'd be teleported back.) </li> </ul> 
+          </p> <br>
+
+         <p> 
+         	This game might be quite a lot, so I'm thinking of just starting with a single player game that just requires the player to solve the maze by going through it. I would then build on it, depending on how much time I've got.  
+         </p>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

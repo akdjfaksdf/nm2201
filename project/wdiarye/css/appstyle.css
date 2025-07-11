@@ -1,0 +1,104 @@
+body {
+	background-color: #CD927D;
+	font: 16px avenir;
+	letter-spacing: 1.2px;
+	color: #E7DFD8;
+
+
+	padding-top: 50px;
+	padding-left: 27%;
+	padding-right: 15%;
+	padding-bottom: 100px;
+}
+
+h1 {
+	box-sizing: border-box;
+	width: 100px;
+	font: 50px Brush Script MT, Brush Script Std, cursive;
+	text-align: right;
+	line-height: 0.7;
+	}
+
+#navbar {
+	text-align: right;
+	font-style: italic;
+	line-height: 1.8;
+}
+
+.navbox {
+	position: fixed;
+	float: left;
+	left: 15%; 
+	top: 0px;
+}
+
+a.navlink:link {
+	color: #D8C4A8;
+	background-color: #1A485B;
+}
+
+a.navlink:visited {
+	color: #D8C4B3;
+	background-color: #1A485B;
+}
+
+
+h3 {
+	box-sizing: border-box;
+	width: 6em;
+	background-color: #1A485B;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 20px;
+	font-style: italic;
+}
+
+.head {
+	font: 18px avenir;
+	letter-spacing: 1.2px;
+	color: #E7DFD8;
+	font-weight: 800;
+	font-style: italic;
+}
+
+.entry {
+	box-sizing: border-box;
+	background-color: #4287A6;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: justify;
+	margin-bottom: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

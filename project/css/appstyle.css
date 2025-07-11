@@ -1,0 +1,207 @@
+
+@font-face {
+    font-family: 'newFont';
+    src: url('../resources/font/imfepiit28p-webfont.woff2') format('woff2'),
+         url('../resources/font/imfepiit28p-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	background-color: #E1D7CD;
+	font: 20px newFont;
+	color: #3A3935;
+	font-style: italic;
+	letter-spacing: 1.5px;
+
+	padding-top: 50px;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 100px;
+}
+
+h1 {
+	margin-top: 0px;
+}
+
+#container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 13% 7% 60% 7% 13%;
+	grid-template-rows: 20px /*100px*/ 600px /*50px 300px*/ 100px;
+}
+
+/*#title {
+	grid-column: 1/4;
+	grid-row: 1/2;
+	background: orange;
+	text-align: center;
+}*/
+
+/*#timer {
+	grid-column: 1/4;
+	grid-row: 2/3;
+	box-sizing: border-box;
+	background: blue;
+	text-align: center;
+}*/
+
+/*on load page*/
+/*on load page*/
+/*on load page*/
+
+#p1div {
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+#p2div {
+	grid-column: 5/6;
+	grid-row: 2/3;
+}
+
+#p1div, #p2div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+	padding-bottom: 30px;
+}
+
+	#p1, #p2 {
+		box-sizing: border-box;
+		width: 80%;
+		height: 50px;
+		background-color: #706E55;
+		color: #CED2DB;
+		margin-top: 10px;
+		font: 15px newFont;
+		font-style: italic;
+	}
+
+	#p1emptyalert, #p2emptyalert {
+		box-sizing: border-box;
+		width: 80%;
+		height: 20px;
+		font-size: 12px;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	#p1start, #p2start {
+		box-sizing: border-box;
+	    width: 80%;
+	    height: 50px;
+	    background-color: #706E55;
+	    color: #CED2DB;
+	    text-align: center;
+	    font: 17px newFont;
+		font-style: italic;
+		cursor: pointer;
+	}
+
+	#p1waitalert, #p2waitalert {
+		box-sizing: border-box;
+		width: 70%;
+		height: 20px;
+		font-size: 12px;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	#WASDinfo, #IJKLinfo {
+		box-sizing: border-box;
+		width: 70%;
+		font-size: 17px;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	#p1SPSGStat, #p2SPSGStat {
+		box-sizing: border-box;
+		width: 70%;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+#west {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	background: #B99676;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	text-align: center;
+}
+
+#east {
+	grid-column: 4/5;
+	grid-row: 2/3;
+	background: #B99676;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	text-align: center;
+
+}
+
+#gamearea {
+	grid-column: 3/4;
+	grid-row: 2/3;
+	text-align: center;
+	background-image: url("../resources/forest.jpg");
+	opacity: 75%;
+	background-size: 140% 140%;
+	background-position: center top;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+#instructions {
+	box-sizing: border-box;
+	width: 80%;
+	background-color: #706E55;
+	opacity: 95%;
+	color: #CED2DB;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+/*#leadbboxtitle {
+	grid-column: 1 / 4;
+	grid-row-start: 4 / 5;	
+	background: pink;
+	height: 100%;
+	margin: 0px;
+	text-align: center;
+}
+
+#leadbbox {
+	grid-column: 1 / 4;
+	grid-row-start: 4 / 5;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	background: purple;
+}
+
+	#win, #opp {
+		box-sizing: border-box;
+	    width: 100%;
+	    height: 100%;
+	    background: #CB6C60;
+	    color: #CED2DB;
+	    text-align: center;
+	    margin: 10px;
+	}
+*/
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+body {
+	background-color: #B99676;
+	font: 16px avenir;
+	letter-spacing: 1.2px;
+	color: #3A3935;
+
+
+	padding-top: 50px;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 100px;
+	text-align: justify;
+}
+
+h1 {
+	font: 50px Brush Script MT, Brush Script Std, cursive;
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 30px;
+}
+
+h3 {
+	font: 30px Brush Script MT, Brush Script Std, cursive;
+	font-weight: 900;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 0px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #3A3935;
+}
+
+tr:nth-child(even) {
+  background-color: #CCB7A3;
+}
+
+th {
+	padding: 5px;
+	text-align: center;
+}
+
+td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 30px;
+	text-align: justify;
+}
+
+.verticalRight {
+	border-right: 1px solid #3A3935;
+	width: 120px;
+}
+
+.head {
+	font-size: 18px;
+	font-weight: 800;
+	font-style: italic;
+	/*float: left;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

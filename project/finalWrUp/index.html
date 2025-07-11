@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/appstyle.css">
+	<title> final write-up </title>
+	<script type="text/javascript" src="appscripts/main.js"></script>
+</head>
+
+<body>
+	<h1>final write-up</h1>
+	
+	<h3> progression timeline </h3>
+	<table>
+		<tr>
+			<th class="verticalRight"> week 7 </th>
+			<td> 
+				<ul>
+					<li> had some general game ideation </li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 8 </th>
+			<td> 
+				<ul>
+					<li> had some concrete game ideation including key functions required and key variables to be stored </li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 9 </th>
+			<td> 
+				<ul>
+					<li> coded up the layout of the game </li>
+					<li> coded up the start game logic and functions </li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 10 </th>
+			<td> 
+				<ul>
+					<li> figured out how to create a random maze-generating algorithm </li>
+					<li> drew a grid </li>
+					<li> created cell objects with a bunch of properties and methods </li>
+					<li> drew the maze using cell properties and methods </li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 11 </th>
+			<td> 
+				<ul>
+					<li> resolved maze-drawing issues </li>
+					<li> improved on the start game logic and functions </li>
+					<li> assigned each character to a random cell </li>
+					<li> tested keydown event listeners to move one character </li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 12 </th>
+			<td> 
+				<ul>
+					<li> applied keydown event listeners across all three characters of one player </li>
+					<li> had characters move one at a time </li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 13 </th>
+			<td> 
+				<ul>
+					<li> simplified code to get all the characters moving in one player then applied it to the other player </li>
+					<li> coded up the mini-game that occurs when the characters of each player meets in the same cell </li>
+					<li> decided on a theme and worked on improving the aesthetics </li>
+					<li> switched colour-fill to image generation as character representation </li>
+
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="verticalRight"> week 14 </th>
+			<td> 
+				<ul>
+					<li> coded up the ending of the game </li>
+					<li> further improved on aesthetics </li>					
+					<li> added sounds </li>
+					<li> resolved remaining errors </li>
+
+				</ul>
+			</td>
+		</tr>
+
+	</table>
+
+	<h3> making use of things learnt in class </h3>
+	<p>
+		<span class="head"> HTML and CSS </span>
+		Back in week 1, we learnt the basic formattings of HTML and to write some paragraphs in html and I tried to demonstrate that in the game introduction. I also managed to change the design elements of the website as leant from the hyperlinked story assignments. 
+		<br> <br>
+		In week 2, we were introduced to form creation in which we were taught about different input types. In this game, I included a text input to capture the players' names and a button input to function as a start button. 
+		<br> <br>
+		In week 3, we were introduced to grid layouts. We were previously asked to check it out too and apply it to our homepages if possible. So I did that and was able to apply that to my game layout too. I also managed to change the layout of my game page a few times and quite easily. 
+		<br> <br> <br>
+
+		<span class="head"> accessing HTML elements in javscript </span>
+		In week 3 also, we were introduced to javascript and changing the innerHTML or innerText of an HTML element. I was able to apply that too in instructing players to key in their names when it is left blank, to notify players when the other player isn't ready, to instruct players which key to press to move once the game starts, and to notify the players when they've won or lose the mini-game. 
+		<br> <br>
+		Then in week 4, we learnt how to get the value that's been entered in an HTML input element. I was able to apply that too in storing the players' names in a variable. I was intending to make use of it in the creation of a leadership board. However, I didn't have enough time to make this update and thus, wasn't able to make use of the variable. 
+		<br> <br> <br>
+
+		<span class="head"> math objects </span>
+		In week 3, we were introduced to math objects and in subsequent weeks, we were given opportunities to further explored them. In this game, I mainly applied Math.random() to have the active cell (in drawing the maze) into one of its random surrounding cell, to have the three characters of each player be allocated to a random cell along their respective starting line, and to have the active character be sent back to a random cell along their starting line when they lose the mini game. I also used Math.floor() to ensure that the random number returned was a whole number that can be recognised as an array's index number.   
+		<br> <br> <br>
+
+		<span class="head"> raphael </span>
+		In week 5, we were introduced to raphael. I had to used raphael functions to create almost everything--getting the walls of the cells drawn with paper.path(), getting the cells be identified as a rectangle with paper.rect(), drawing the character images and pop-up when the characters collide, and when the game ends with paper.image(). 
+		<br> <br> <br>
+
+		<span class="head"> event listeners </span>
+		In week 5 also, we were taught about even listners. The game relies on keyup event listeners to have the characters move, keydown even listeners to have the players make choices in the mini-game and click event listeners on buttons to have the game start and on a raphael image element to have the game start again. 
+		<br> <br> <br>
+
+		<span class="head"> if statements </span>
+		Also in week 5, we were introduced to if statements. They were also used really liberally in this game. In the drawing of the maze, they were used to check if the cells surrounding (on top of, below, on the left of, or on the right of) each cell has been visited (if they exist). Then, if there are unvisited neighbouring cells, the cells get pushed into an array, and if not, the cell backtracks. It was also used in the changing of cell wall properties—if statements were used to check the origin and the direction in which the active cell has moved to alter the cell wall stroke property to blend in with the cell area colour. 
+		<br> <br>
+		Outside the maze creation, this cell wall stroke property will also later be used in another if statement to check if an active character can be moved in certain direction—they can move only in the directions in which the cell wall stroke colour blends in with that of the cell. It is also used to check several boolean values, array lengths, and to compare the values of variables to check if a block of statements should be run. Besides ===, I also got to explore the use of the logical operators &&, ||, and !== more in this game.  
+		<br> <br> <br>
+
+		<span class="head"> object properties and methods </span>
+		In week 6, we learnt how to create properties within objects and in week 9, we learnt further leant how to access the properties within objects and change then and then to create methods within objects too. I made use of this learning most intensely in the drawing of each cell and I found it to be really useful because everytime I pass a cell into a variable, I get to access a serious array of properties of the particular cell including it's position and wall properties which was particularly useful. I also get to call functions with properties of the cell really simply even after the cell object has been passed into different variables. It proved to be really useful in removing the walls of the cell in the maze-building function through the method checkNb and in the tracking of where the active characters are at in the keydown function through the method skunkF and flyingsqF. Particularly, removing of walls was also only possible because I was able to change the properties of each cell. 
+		<br> <br> <br>
+
+		<span class="head"> arrays and loops </span>
+		In week 6, we were also introduced to arrays and loops and they were later elaborated on in the following weeks. I found them to be really useful to and made use of them in so many areas of the game. 
+		<br> <br>
+		Arrays were really essential in the creation of the maze. I had to hold all the cells drawn in an array, the wall of each cell in another array, and the 4 other cells surrounding each cell in yet another array. 
+		<br> <br>
+		Besides the drawing of the maze, I also used them to store (a) the sets of cells that each character can be randomly allocated to, (b) the cells in which the characters of each player do end up being allocated in, (c) the character images drawn where each character is being allocated, (d) the cells that indicate the finishing line for each character, (e) the active character images drawn when overlapping the inactive characters, and (f) the images drawn every time the two players makes the same choice in the mini-game.   
+		<br> <br>
+		For the maze creation, the arrays were really more for storing elements, but outside the maze creation, the arrays were created so that each stored element could also be accessed and altered in some ways. In (b), a for loop was used so that character images can be drawn in each of the array. In (d), a for loop was used to have each cell in the last column be checked against the location of the active character. In (e), a for loop was used to have every overlap images drawn removed. In (f), a for loop was also used to delete the images drawn when a function is called multiple times to generates multiple copies of the image. 
+		<br> <br> 
+		Additionally, I also found the for loops useful even when not used with arrays. To create each cell, I had to use for loops to go through every row variable, and within each row variable, go through every column variable.
+		<br> <br> <br> 
+
+		<span class="head"> audio </span>
+		In week 8, we learnt how to incorporate audio into a website and I got make use of that to add sounds when each character reaches the finish line, when characters of each player meet each other, when each player makes a choice in the mini-game, when they make the same choice and have to have to thus have to make another choice again, and alas, when a player wins. 
+		<br> <br> <br>
+
+		<span class="head"> collision </span>
+		In week 11, we learnt about collision, my game didn't really rely much on collision like was taught in class, but I was able to detect when the two characters from each player are in the same cell by accessing the position properties of each player's active character cell and compare them.   
+	</p>
+
+	<h3> things learnt </h3>
+	<p>
+		<span class="head"> better understanding of stuff learnt </span>
+		When starting to create my game, I really had no idea how I'd go about creating a maze. So I had to do some research for it. There were quite a few methods to create a maze, but I settled on recursive backtracking because there seemed to be more information about it--plus there was a youtube tutorial for it. For the most parts, the maze creation makes use of things we have learnt in class. It was mainly only the recursive backtracking part of the maze generation was what a new aspect that I had to learn. Nonetheless, following the tutorial and then altering their steps to match raphael functions--trying to make sense of and apply what was taught in class in a completely foreign siuation, just testing if what I did works--really helped me better understand what was taught. And I think deepening my understanding in what was taught in class through this maze generation was what really enabled me to further apply them in more new complex situations. 
+		<br> <br> <br>
+
+		<span class="head"> mistakes i tend to make </span>
+		While I was able to better apply what I learnt in new situations, I still run into several errors and bugs. And in trying to resolve them--going through lines and lines of codes, trying to understand the order in which the codes get run, really processing the logic of what I've written, figuring out where the logic starts to break--I was also able to spot some mistakes I tend to make. In loops, I tend to forget to add a variable to end a loop once it is no longer necessary for the loop to be run. Several issues could also be resolved by rearranging some codes. I also tend to oversee elements that are not exactly visible on the webpage. For example, when I had the active character allocated as the cell rectangle (which was a property of the cell) and when the coloured cell rectangle didn't move with a keydown, I initially thought that the entire function wasn't working. It was only when I started console logging that I realised that the character was actually being allocated to another cell although I couldn't see it. (So the issue area became somewhat more specified). In another instance, when the overlap character images were created and not deleted, I thought that the issue was that the original character images weren't being deleted--it didn't cross my mind that the images were from the overlap. It was only when I played the game a few times, moving the characters in various way to attempt the cause of the issue that I realised the underlying issue. So in the future, I can bear in mind these mistakes I tend to make and look out for then to easier resolve the errors. 
+		<br> <br> 
+		Additionally, I found that console logging where I think an error might have occured also helped a lot in confirming or disconfirming where the errors are. However, I also learnt that console logging functions also calls on a function which could disrupt the code, so I'd avoid that in the future. 
+		<br> <br> <br>
+
+		<span class="head"> new things </span>
+		The recursive backtracking for the maze generation mainly makes use of the array.pop() function when the cells around the active cell has all been visited and it has to go back to the cell it was in to check for the cells around it and so on till it finds an unvisited cell. We've already leant about arrays, so understanding how the arrays stack up and how the array.pop() function removes the last element added to the array was an okay concept to digest. 
+		<br> <br> 
+		In addition to array.pop(), I also found array.splice() particularly useful in removing elements from the array. Specifically, I used the array.splice() function to remove each character from character list array once it is active so that I could use the the character list length to track if a player has finished and won the game.
+		<br> <br>
+		We were taught about paper.clear() as a raphael function, but I found element.remove() even more useful in creating this game. I used it to remove raphael images of the characters every time it moves, the raphael images of the character generated due to overlaps, and the raphael images of of the mini-game. 
+		<br> <br>
+		To have the game restart, I also found the location.reload() function really useful. 
+		<br> <br> <br>
+	</p>
+
+	<h3> some possible future updates </h3>
+	<p>
+		To make use of the players' name inputs, a leadership board could be incorporated. A timer could be added so that the time taken for a player to win the game can be tracked. After each game, the time taken can then be compared against an array of time taken for every game played (along with properties of the pair of players' name). If the time taken is within the five shortest time taken, the winner's name could be displayed under a list of impressive winners; if the time taken is within the five longest time taken, the loser's name could be displayed under a list of formidable opponents. 
+		<br> <br> 
+		We learnt about setting intervals and clearing intervals in week 9 and never got to apply it in this game, but incorporating them in creation of the stopwatch is one way to make use of that knowledge. Additionally, they could be applied to animations (as learnt in week 9)--it would be really nice to have the characters be animated as they move from cell to cell as if they really are walking instead of just jumping from cell to cell. Having them be animated into the side divisions would also be really cool.
+		<br> <br> 
+		In week 4, we also learnt about how to use inputs to alter a webpage colour appearance. So I was thinking that it would be quite cool to offer players a customisable theme on top of a range of pre-designed themes. The customisable them could include a range of sliders to alter the colour of the background, the maze, and even the svg characters (and it would also be fun to allow them a choice of animal characters or even upload their own character image).
+		<br> <br> 
+		Finally, it would also be nice if I'm able to figure out how to make the game work across different networks in a real multiplayer setting, or even further develop it to work as a single player game with the other player being automated as an opponent.   
+		<br> <br> <br>
+	</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
