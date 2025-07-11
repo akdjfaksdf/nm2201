@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <!-- Use script element to indicate path to our javascript files -->
+        <script defer type="text/javascript" src="appscripts/main.js" >
+        </script>
+    </head>
+
+    <body >
+            <h3> Color Explorer  </h3>
+
+            <div id="colorSpec">
+                <label class="label" for="userColor"> Hex color: </label>
+                <input id="userColor" type="text" name="userColor">
+                <input class="label" id="doitButton" type="button" value="Do it !" onclick="changeByHex()"> <br> <br>
+                <label class="label" for="mySlider"> opacity: </label>
+                <input id="mySlider"  type= "range" name="mySlider" step=".01" min="0" max="1" onchange="changeOpac()">
+
+                <!--part3; 4, 6-->
+                <label class="label" for="hueSlider"> hue: </label>
+                <input id="hueSlider" type="range" name="hueSlider" step="1" min="0" max="360" onchange="changeByHsl()"> 
+                <label class="label" for="satSlider"> saturation: </label>
+                <input id="satSlider" type="range" name="satSlider" step="1" min="0" max="100" onchange="changeByHsl()">
+                <label class="label" for="lightSlider"> lightness: </label>
+                <input id="lightSlider" type="range" name="lightSlider" step="1" min="0" max="100" onchange="changeByHsl()">
+                <br> <br>
+
+                <!--part3; 7-->
+                <input class="label" id="newbutt" type="button" name="newbutt" value="what hsl!">
+
+            </div>
+            
+            <div id="colorDisplay">
+            </div>
+         
+    </body>
+</html>
+

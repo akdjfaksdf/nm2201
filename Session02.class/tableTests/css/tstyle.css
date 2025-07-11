@@ -1,0 +1,47 @@
+
+body {
+	background-color: #EAECEE;
+	font: 15px avenir;
+	letter-spacing: 0.3px;
+	padding-top: 50px;
+	padding-left: 12%;
+	padding-right:12%;
+	padding-bottom: 50px;
+}
+
+h2 {
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 40px
+}
+
+caption {
+	font-weight: bolder;
+	font-size: 18px;
+	letter-spacing: 0.7px
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #D2910F;
+  text-align: center;
+}
+
+th {
+  padding: 8px;
+  width: 33%;
+}
+
+td {
+  padding: 5px;
+  width: 33%;
+}
+
+.verticalRight {
+	border-right: 1px solid #D2910F;
+}
+
+tr:nth-child(even) {
+  background-color: #EFD7BF;
+}
