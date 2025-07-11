@@ -1,0 +1,445 @@
+body {
+  background-color: #EBBF8D;
+  font: 15px avenir;
+  letter-spacing: 0.7px;
+
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 100px;
+}
+
+h1 {
+  font: 50px Brush Script MT, Brush Script Std, cursive;
+  text-align: center;
+  color: #621510;
+ /* text-shadow: 2px 1px 2px #F6BB79;*/
+  font-weight: 900;
+}
+
+h4 {
+  font: 30px Brush Script MT, Brush Script Std, cursive;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+  font-weight: 900;
+}
+
+h5 {
+  font: 20px avenir;
+  font-style: italic;
+  text-align: center;
+  color: #E0C1A7;
+  margin: 0px;
+}
+
+p{
+  margin: 5px;
+}
+
+/* nav bar */
+/* nav bar */
+/* nav bar */
+/* nav bar */
+/* nav bar */
+
+.navbar {
+  padding-left: 7px;
+  padding-right: 17px;
+  text-align: left;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.navbox {
+  position: fixed;
+  float: right;
+  right:10px; 
+  top: 80px;
+  
+}
+
+a.navlink:link {
+  color: #37242C;
+  background-color: #B87D79;
+}
+
+a.navlink:visited {
+  color: #621510;
+  background-color: #B87D79;
+}
+
+/* list things */
+/* list things */
+/* list things */
+/* list things */
+/* list things */
+
+li {
+  margin-right: -10px; 
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* table things */
+/* table things */
+/* table things */
+/* table things */
+/* table things */
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.classwtabl th {
+  padding: 8px;
+  background-color: #496077;
+  color: #CECED5;
+  border-bottom: 1px solid #78848C;
+  text-align: center;
+}
+
+/*table.assigtabl th {
+  padding: 8px;
+  background-color: #C4643A;
+  color: #DACAC3;
+  border-bottom: 1px solid #B68978;
+  text-align: center;
+}
+
+table.codeatabl th {
+  padding: 8px;
+  background-color: #922F1C;
+  color: #D9C9C3;
+  border-bottom: 1px solid #9F7666;
+  text-align: center;
+}*/
+
+table.classwtabl td {
+  padding: 5px;
+  background-color: #CECED5;
+  color: #6D7980;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-bottom: 1px solid #D4D4DB;
+  text-align: left;
+}
+
+.classwtablR {
+  border-right: 1px solid #D4D4DB;
+}
+
+/*table.assigtabl td {
+  padding: 5px;
+  background-color: #DACAC3;
+  color: #B68978;
+  padding-left: 20%;
+  padding-right: 40px;
+  border-bottom: 1px solid #E0D0C9;
+  text-align: left;
+}
+
+table.codeatabl td {
+  padding: 5px;
+  background-color: #D9C9C3;
+  color: #9F7666;
+  padding-left: 20%;
+  padding-right: 40px;
+  border-bottom: 1px solid #E0D0CA;
+  text-align: left;
+}*/
+
+
+/* grid layout */
+/* grid layout */
+/* grid layout */
+/* grid layout */
+/* grid layout */
+
+.container {
+  display: grid;
+  grid-template-columns: 30% 20% 50%;
+  grid-template-rows: 30px auto auto auto 100px;
+}
+
+/* top things */
+/* top things */
+/* top things */
+/* top things */
+/* top things */
+
+#top {
+  grid-column: 1 / 3;
+  grid-row-start: 1 / 2;
+  padding-left: 100px
+}
+
+/* bio things */
+/* bio things */
+/* bio things */
+/* bio things */
+/* bio things */
+
+.biogrid {
+  grid-column: 1 / 2;
+  grid-row-start: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 70px;
+}
+
+.prpic {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bio1 {
+  box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #316456;
+    text-align: left;
+}
+
+.part1 {
+  color: #F3E2CE;
+  font: 13px avenir;
+}
+
+.part2 {
+  float: right;
+  color: #FBE9D5;
+  font: 12px avenir;
+  font-style: italic;
+  padding-top: 3.4px
+ }
+
+.bio2 {
+  box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: #316456;
+    text-align: left;
+    font: 12px avenir;
+    color: #F1D0C5;
+  }
+
+a.biolink:link {
+  color: #CFD4ED;
+}
+
+a.biolink:visited {
+  color: #E8F3E7;
+}
+
+/* project things */
+/* project things */
+/* project things */
+/* project things */
+/* project things */
+
+h4.project {
+  color: #E7A217; 
+  text-shadow: 2px 1px 2px black; 
+  text-align: right;
+  padding-right: 40px;
+
+}
+
+#project {
+  grid-column: 2 / 4;
+  grid-row: 2 /3;
+  padding-top: 13.5px;
+}
+
+.projbox {
+  box-sizing: border-box;
+    width: 100%;
+    background-color: #E7A217;
+    margin: auto;
+    padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gamedes {
+  box-sizing: border-box;
+    width: 95%;
+    background-color: #23627F;
+    color: #CED2DB;
+    text-align: center;
+    margin: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.wdiarye {
+  color: #23627F;
+  font-style: italic;
+  text-align: center;
+}
+
+#playButt {
+  box-sizing: border-box;
+    width: 100px;
+    height: 50px;
+    background-color: #CB6C60;
+    color: #CED2DB;
+    text-align: center;
+    margin: 10px;
+}
+
+/* classwork things */
+/* classwork things */
+/* classwork things */
+/* classwork things */
+/* classwork things */
+
+h4.classwork {
+  color: #496077;
+}
+
+#classwork {
+  grid-column: 1 / 4;
+  grid-row: 3 /5;
+}
+
+a.classwlink:link {
+  color: #4E6976;
+}
+
+a.classwlink:visited {
+  color: #3A525E;
+}
+
+/* codealongs things */
+/* codealongs things */
+/* codealongs things */
+/* codealongs things */
+/* codealongs things */
+
+/*h4.codealongs {
+  color: #922F1C;
+}
+
+#codealongs {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  padding-left: 30px;
+}
+
+a.codealongs:link {
+  color: #9F4138;
+}
+
+a.codealongs:visited {
+  color: #823223;
+}*/
+
+/* assignments things */
+/* assignments things */
+/* assignments things */
+/* assignments things */
+/* assignments things */
+
+/*h4.assignments {
+  color: #C4643A;
+}
+
+#assignments {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  padding-left: 30px;
+
+  margin: auto;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a.asslink:link {
+  color: #B1703B;
+}
+
+a.asslink:visited {
+  color: #AD5834;
+}
+*/
+/* size change */
+/* size change */
+/* size change */
+/* size change */
+/* size change */
+
+@media screen and (max-width: 850px) {
+  .container > * {
+    margin-bottom: 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 120px auto auto auto auto auto 100px;
+  }
+
+  .top {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2
+  }
+
+  .biogrid {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .project {
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;  
+  }
+
+  .classwork {
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+
+  .codealongs {
+  grid-column: 1 / 5;
+    grid-row: 5 / 6;
+  }
+
+  .assignments {
+    grid-column: 1 / 5;
+    grid-row: 6 / 7
+  }
+
+
+}
